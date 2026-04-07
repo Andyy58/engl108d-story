@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* ── Custom Theme Tokens (Tailwind v4 CSS-first config) ── */
+@theme {
+  --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif;
+
+  --color-slack-bg: #1a1d21;
+  --color-slack-sidebar: #19171d;
+  --color-slack-border: #383f47;
+  --color-slack-text: #d1d2d3;
+  --color-slack-text-muted: #ababad;
+  --color-slack-active: #1164a3;
+  --color-slack-hover: #27242c;
+  --color-slack-hover-msg: #222529;
+  --color-slack-input-bg: #222529;
+  --color-slack-input-border: #565856;
+  --color-slack-unread: #cd2553;
+  --color-slack-bot-bg: #1d2229;
+
+  --animate-sidebar-in: sidebar-in 280ms ease-out forwards;
+  --animate-badge-pop: badge-pop 400ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ── Keyframes ── */
+@keyframes sidebar-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes badge-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ── Base Reset ── */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Hide scrollbar but keep scroll functionality ── */
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
