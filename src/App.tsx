@@ -11,14 +11,14 @@ export default function App() {
       <div className="hidden h-screen w-screen text-slack-text bg-slack-bg md:flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-[24px] font-bold text-white mb-4">
-            Project Knight
+            Meridian Capital
           </h1>
           <p className="text-slack-text-muted mb-6">
             An Slack-based threaded story.
           </p>
           <button
             onClick={() => setHasStarted(true)}
-            className="bg-slack-active text-white px-6 py-2 rounded font-bold hover:bg-[#148567] transition-colors"
+            className="cursor-pointer bg-slack-active text-white px-6 py-2 rounded font-bold hover:bg-[#148567] transition-colors"
           >
             Click to Enter
           </button>
