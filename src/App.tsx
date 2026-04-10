@@ -11,7 +11,7 @@ export default function App() {
       <div className="hidden h-screen w-screen text-slack-text bg-slack-bg md:flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-[24px] font-bold text-white mb-4">
-            Meridian Capital
+            Project Knight
           </h1>
           <p className="text-slack-text-muted mb-6">
             An Slack-based threaded story.
